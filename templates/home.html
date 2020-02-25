@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+  <html>
+  <head>
+    <title>Check Yo Self</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+  </head>
+
+  <body>
+    <header>
+      <h1 class=title>Check Yo Self</h1>
+    </header>
+    <div class="textbox">
+      <form action="{{ url_for('home') }}", method="post">
+        <textarea name="input" class="box" rows="20" cols="100">{{ text }}</textarea>
+        <input type="submit" name="button" id="button" value="Send">
+      </form>
+    </div>
+  </body>
+
+</html>
