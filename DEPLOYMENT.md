@@ -116,7 +116,7 @@ If you deploy the Flask backend, update the API endpoint in `docs/app.js`:
 // Replace the local spell checking with API call
 async function checkSpelling() {
     const text = textarea.value.trim();
-    
+
     const response = await fetch('YOUR_BACKEND_URL/api/check', {
         method: 'POST',
         headers: {
@@ -124,7 +124,7 @@ async function checkSpelling() {
         },
         body: JSON.stringify({ text: text })
     });
-    
+
     const data = await response.json();
     textarea.value = data.corrected_text;
 }

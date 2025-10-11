@@ -1,4 +1,4 @@
-# Spell Checker - Check Yo Self 
+# Spell Checker - Check Yo Self
 
 🎯 **Live Demo**: [https://vaporjawn.github.io/Spell-Checker/](https://vaporjawn.github.io/Spell-Checker/)
 

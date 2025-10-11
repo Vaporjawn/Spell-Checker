@@ -53,7 +53,7 @@ class SpellChecker {
     // Find the closest matching word in dictionary
     correct(word) {
         const lowerWord = word.toLowerCase();
-        
+
         // If word is in dictionary, return as-is
         if (this.dictionary.has(lowerWord)) {
             return word;
@@ -124,7 +124,7 @@ function clearText() {
 // Check spelling function
 async function checkSpelling() {
     const text = textarea.value.trim();
-    
+
     if (!text) {
         alert('Please enter some text to check!');
         return;
