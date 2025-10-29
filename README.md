@@ -17,6 +17,10 @@
 
 ---
 
+<img width="1725" height="971" alt="Screenshot 2025-10-10 at 20 58 44" src="https://github.com/user-attachments/assets/9ebd5028-8e58-41f2-8e0f-2bb2120b0391" />
+<img width="1728" height="685" alt="Screenshot 2025-10-10 at 20 58 51" src="https://github.com/user-attachments/assets/ea84743e-0319-43ea-b5f1-f299b0133f8a" />
+
+
 ## 📑 Table of Contents
 
 <details open>
