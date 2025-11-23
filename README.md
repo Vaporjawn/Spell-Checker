@@ -2,8 +2,8 @@
 
 <div align="center">
 
-[![Python 3.11+](https://img.shields.io/badge/python-3.11+-blue.svg)](https://www.python.org/downloads/)
-[![Flask](https://img.shields.io/badge/flask-3.0.0-green.svg)](https://flask.palletsprojects.com/)
+[![Python 3.13+](https://img.shields.io/badge/python-3.13+-blue.svg)](https://www.python.org/downloads/)
+[![Flask](https://img.shields.io/badge/flask-3.1.0-green.svg)](https://flask.palletsprojects.com/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 [![Tests](https://img.shields.io/badge/tests-passing-brightgreen.svg)]()
@@ -109,7 +109,27 @@ A sophisticated statistical spell checker that goes beyond simple dictionary loo
 | 🎨 **Modern UI** | Clean, responsive Flask-based design |
 | ⚡ **Real-time** | Instant spell checking with visual feedback |
 | 📄 **Batch Processing** | Handle paragraphs and documents |
-| ♿ **Accessible** | WCAG compliant with keyboard navigation |
+| ♿ **Accessible** | WCAG 2.1 AA compliant with keyboard navigation |
+| 🔄 **Error Recovery** | Automatic retry with exponential backoff |
+| 📊 **Analytics** | Built-in performance and usage tracking |
+| ⌨️ **Keyboard Shortcuts** | Ctrl/Cmd+Enter to check, Ctrl/Cmd+K to clear |
+| 📈 **Loading States** | Visual progress indicators and status feedback |
+
+### 🎯 Frontend Enhancements
+- ✅ **Robust Error Handling**: Retry logic with exponential backoff for network failures
+- ✅ **Loading States**: Progress bars, button animations, and visual feedback
+- ✅ **Smart Notifications**: Enhanced notification system with types and icons
+- ✅ **Character Counter**: Real-time character count with visual warnings
+- ✅ **Analytics Integration**: Event tracking, performance monitoring, error tracking
+- ✅ **Accessibility Features**: WCAG 2.1 AA compliance with semantic HTML and ARIA
+
+### 🚀 CI/CD & Monitoring
+- ✅ **Automated CI/CD Pipeline**: GitHub Actions workflow with 7 comprehensive jobs
+- ✅ **Multi-Stage Testing**: Lint, security scan, test (Python 3.9-3.11), build, frontend validation
+- ✅ **Security Scanning**: Bandit and Safety integration with artifact reporting
+- ✅ **Monitoring Endpoints**: Health checks (/api/health), metrics (/api/metrics), status (/api/status)
+- ✅ **Performance Tracking**: Client-side and server-side performance monitoring
+- ✅ **Comprehensive Documentation**: Detailed guides for [CI/CD](CI_CD_GUIDE.md), [Monitoring](MONITORING.md), and [Frontend Features](FRONTEND_FEATURES.md)
 
 ### Development & Deployment
 - ✅ **Comprehensive Testing**: Full pytest suite with >90% code coverage
@@ -1699,6 +1719,53 @@ def home():
     pass
 ```
 
+## Security
+
+### 🔒 Security Features
+
+This project implements comprehensive security measures:
+
+- **✅ Security Headers**: XSS protection, clickjacking prevention, MIME sniffing protection
+- **✅ Input Validation**: All user inputs validated and sanitized with length restrictions
+- **✅ Session Security**: Secure cookies with HttpOnly and SameSite flags
+- **✅ Dependency Management**: Automated security updates via Dependabot
+- **✅ Security Scanning**: Pre-commit hooks with Bandit and secret detection
+- **✅ Up-to-date Dependencies**: Latest versions with security patches applied
+
+### 📋 Security Documentation
+
+- **[SECURITY.md](SECURITY.md)**: Vulnerability reporting procedures and security policy
+- **[SECURITY_UPDATES.md](SECURITY_UPDATES.md)**: Complete security update history and details
+
+### 🛡️ Reporting Security Vulnerabilities
+
+**Important**: Please **do not** create public GitHub issues for security vulnerabilities.
+
+To report security issues:
+- **GitHub Security**: Use the [Security tab](https://github.com/Vaporjawn/Spell-Checker/security/advisories/new)
+- **Email**: victor.williams.dev@gmail.com (Subject: "Security: Spell-Checker Vulnerability")
+
+We typically respond within 48 hours and provide updates every 5 business days.
+
+### 🔄 Automated Security Updates
+
+This project uses [Dependabot](https://docs.github.com/en/code-security/dependabot) for:
+- **Weekly dependency scans** for Python packages
+- **Weekly scans** for GitHub Actions
+- **Automatic pull requests** for security updates
+- **Grouped updates** for easier review
+
+### ✅ Recent Security Updates
+
+**Last Updated**: November 23, 2025
+
+- ✅ All dependencies updated to latest secure versions
+- ✅ Python runtime updated to 3.13.0
+- ✅ Security headers and input validation implemented
+- ✅ Automated security monitoring configured
+
+See [SECURITY_UPDATES.md](SECURITY_UPDATES.md) for complete details.
+
 ## Contributing
 
 We welcome contributions from the community! Whether you're fixing bugs, adding features, improving documentation, or suggesting enhancements, your help is appreciated.
@@ -2606,6 +2673,122 @@ See [Changelog](#changelog) for version history and upcoming features.
 - v1.1.0: Context-aware suggestions, custom dictionaries, RESTful API
 - v1.2.0: Multi-language support, phonetic similarity
 - v2.0.0: Neural network corrections, grammar checking
+
+---
+
+## 📚 Additional Documentation
+
+This project includes comprehensive documentation for various aspects of the application:
+
+### Core Documentation
+- **[README.md](README.md)** - Main project documentation (this file)
+- **[CONTRIBUTING.md](CONTRIBUTING.md)** - Contribution guidelines and development workflow
+- **[LICENSE](LICENSE)** - MIT License details and terms
+- **[SECURITY.md](SECURITY.md)** - Security policy and vulnerability reporting
+- **[SECURITY_UPDATES.md](SECURITY_UPDATES.md)** - Security update history
+
+### Feature Documentation
+- **[FRONTEND_FEATURES.md](FRONTEND_FEATURES.md)** - Comprehensive guide to frontend enhancements including:
+  - Enhanced error handling with retry logic
+  - Loading states and visual feedback
+  - Keyboard shortcuts and accessibility features
+  - Analytics integration and performance monitoring
+  - Character counter and smart notifications
+  - Browser compatibility and responsive design
+
+- **[MONITORING.md](MONITORING.md)** - Complete monitoring and analytics guide covering:
+  - Frontend analytics system and event tracking
+  - Backend health endpoints and metrics
+  - External service integrations (Sentry, Google Analytics, Datadog)
+  - Performance monitoring and KPIs
+  - Alerting rules and logging best practices
+  - Privacy considerations and compliance
+
+- **[CI_CD_GUIDE.md](CI_CD_GUIDE.md)** - Comprehensive CI/CD pipeline documentation including:
+  - GitHub Actions workflow architecture
+  - Pipeline jobs: lint, security, test, build, frontend validation
+  - Running tests locally and viewing results
+  - Artifact management and deployment readiness
+  - Troubleshooting common issues
+  - Integration with external services (Codecov, Slack)
+
+### API Documentation
+- **[API_INTEGRATION.md](API_INTEGRATION.md)** - API integration guide and endpoints
+- **Main.py API Endpoints**:
+  - `GET /` - Home page
+  - `POST /` - Spell check submission
+  - `GET /api/health` - Health check with system information
+  - `GET /api/status` - Component status check
+  - `GET /api/metrics` - Performance metrics endpoint
+
+### Deployment Documentation
+- **[DEPLOYMENT.md](DEPLOYMENT.md)** - Deployment guides for various platforms
+- **[GITHUB_PAGES_SETUP.md](GITHUB_PAGES_SETUP.md)** - GitHub Pages deployment instructions
+- **[ENABLE_PAGES_NOW.md](ENABLE_PAGES_NOW.md)** - Quick start for GitHub Pages
+- **[Procfile](Procfile)** - Heroku deployment configuration
+- **[runtime.txt](runtime.txt)** - Python runtime specification
+
+### Project Information
+- **[VERSION.md](VERSION.md)** - Version history and changelog
+- **[ARCHITECTURE.md](ARCHITECTURE.md)** - System architecture and design decisions
+- **[INTEGRATION_SUMMARY.md](INTEGRATION_SUMMARY.md)** - Integration overview
+- **[CHANGELOG_INTEGRATION.md](CHANGELOG_INTEGRATION.md)** - Changelog integration details
+- **[QUICK_START.md](QUICK_START.md)** - Quick start guide for new users
+
+### Key Features Covered in Documentation
+
+#### Frontend Enhancements
+- ✅ **Error Handling**: Retry logic with exponential backoff (1s, 2s, 4s delays)
+- ✅ **Loading States**: Progress bars, button animations, and status indicators
+- ✅ **Keyboard Shortcuts**:
+  - `Ctrl/Cmd + Enter` - Check spelling
+  - `Ctrl/Cmd + K` - Clear text
+- ✅ **Smart Notifications**: Color-coded notifications with icons
+- ✅ **Character Counter**: Real-time counter with visual warnings at 75% and 90%
+- ✅ **Analytics**: Event tracking, performance monitoring, error tracking
+- ✅ **Accessibility**: WCAG 2.1 AA compliance with ARIA labels
+
+#### Monitoring & Observability
+- ✅ **Health Endpoints**: `/api/health`, `/api/status`, `/api/metrics`
+- ✅ **Performance Tracking**: Client-side and server-side monitoring
+- ✅ **Error Tracking**: Comprehensive error logging and analysis
+- ✅ **Session Analytics**: User behavior and performance insights
+- ✅ **External Integrations**: Sentry, Google Analytics, Datadog, New Relic
+
+#### CI/CD Pipeline
+- ✅ **7-Stage Pipeline**: Lint → Security → Test → Build → Frontend → Deploy → Notify
+- ✅ **Multi-Version Testing**: Python 3.9, 3.10, 3.11 compatibility
+- ✅ **Security Scanning**: Bandit and Safety for vulnerability detection
+- ✅ **Code Quality**: Black, isort, Flake8, Pylint enforcement
+- ✅ **Test Coverage**: Pytest with coverage reporting and Codecov integration
+- ✅ **Frontend Validation**: HTML validation and JavaScript syntax checking
+- ✅ **Artifact Management**: Test results, security reports, deployment reports
+
+### Quick Links to Documentation
+
+**For Users:**
+- [Quick Start Guide](QUICK_START.md)
+- [Web Interface Usage](#usage)
+- [API Reference](#api-reference)
+
+**For Developers:**
+- [Development Setup](#development)
+- [Contributing Guidelines](CONTRIBUTING.md)
+- [Architecture Overview](ARCHITECTURE.md)
+- [CI/CD Guide](CI_CD_GUIDE.md)
+
+**For DevOps:**
+- [Deployment Guide](DEPLOYMENT.md)
+- [Monitoring Setup](MONITORING.md)
+- [Security Policy](SECURITY.md)
+- [CI/CD Pipeline](CI_CD_GUIDE.md)
+
+**For Reviewers:**
+- [Frontend Features](FRONTEND_FEATURES.md)
+- [API Integration](API_INTEGRATION.md)
+- [Integration Summary](INTEGRATION_SUMMARY.md)
+
+---
 
 ### Contributors
 

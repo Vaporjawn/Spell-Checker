@@ -7,11 +7,12 @@ A beautiful, modern spell checker with an intelligent AI-powered correction algo
 ## ✨ Features
 
 - ⚡ **Lightning Fast**: Instant spell checking with advanced algorithms
-- 🎯 **Accurate**: High precision corrections based on context
-- 🔒 **Private**: All processing happens in your browser
+- 🎯 **Accurate**: High precision corrections using backend API or client-side fallback
+- 🔒 **Private**: Your text stays secure with client-side fallback option
 - 📱 **Responsive**: Works perfectly on all devices
 - 🎨 **Beautiful UI**: Modern gradient design with smooth animations
 - ⌨️ **Keyboard Shortcuts**: Press Ctrl/Cmd + Enter to check spelling
+- 🔌 **Smart Integration**: Backend API with automatic client-side fallback
 
 ## 🚀 Usage
 
@@ -22,10 +23,22 @@ A beautiful, modern spell checker with an intelligent AI-powered correction algo
 
 ## 🛠️ Technology
 
-- Pure JavaScript (no dependencies)
-- CSS3 with custom properties
-- Responsive design
-- Client-side processing (works offline)
+- **Frontend**: Pure JavaScript with backend API integration
+- **Backend**: Flask API with trained ML model (optional)
+- **Architecture**: Smart fallback system (backend → client-side)
+- **CSS3**: Custom properties with modern animations
+- **Responsive**: Mobile-first design
+- **Offline Support**: Client-side processing when backend unavailable
+
+## 🔌 API Integration
+
+The spell checker uses a smart integration approach:
+
+1. **Primary Mode**: Calls Flask backend API for ML-powered corrections
+2. **Fallback Mode**: Uses client-side algorithm if backend unavailable
+3. **Automatic**: Seamlessly switches between modes
+
+See [API_INTEGRATION.md](../API_INTEGRATION.md) for detailed setup instructions.
 
 ## 📄 License
 

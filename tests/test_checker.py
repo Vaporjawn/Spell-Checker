@@ -13,7 +13,7 @@ def test_knowns():
 
 
 def test_is_known():
-  assert checker.is_known('dog') is True
+    assert checker.is_known("dog") is True
 
 
 def test_error_prob():

@@ -22,3 +22,10 @@ testpaths = ["tests"]
 python_files = "test_*.py"
 python_functions = "test_*"
 addopts = "-v --tb=short"
+
+[tool.bandit]
+exclude_dirs = ["tests", "data", ".venv", "venv"]
+skips = ["B101"]  # Skip assert_used check in tests
+
+[tool.bandit.assert_used]
+skips = ["*/test_*.py"]

@@ -127,6 +127,20 @@ ENV/
 env.bak/
 venv.bak/
 
+# Security sensitive files
+*.pem
+*.key
+*.cert
+*.p12
+*.pfx
+secrets.yml
+secrets.yaml
+.secrets
+.env.local
+.env.*.local
+credentials.json
+service-account.json
+
 # Spyder project settings
 .spyderproject
 .spyproject

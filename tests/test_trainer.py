@@ -1,4 +1,3 @@
-import pytest
 import sys
 import os
 
@@ -17,10 +16,12 @@ def test_words():
 def test_bigram():
     s = "Hello World!, What's up?"
     bigrams = trainer.bigrams(s)
+    # Each sentence gets its own ^ and $ markers
     assert bigrams == [
         ("^", "hello"),
         ("hello", "world"),
-        ("world", "what's"),
+        ("world", "$"),
+        ("^", "what's"),
         ("what's", "up"),
         ("up", "$"),
     ]
