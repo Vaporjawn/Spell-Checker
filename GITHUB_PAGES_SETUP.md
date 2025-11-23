@@ -1,22 +1,65 @@
-# 🚀 GitHub Pages Activation Steps
+# 🚀 GitHub Pages Setup & Deployment Guide
 
-## ✅ Completed Steps
+## ✅ Completed Automated Setup
 - [x] Created static deployment files in `docs/` folder
-- [x] Committed and pushed to GitHub repository
-- [x] Files are now live on GitHub: https://github.com/Vaporjawn/Spell-Checker
+- [x] Created GitHub Actions workflow for automatic deployment
+- [x] Added `.nojekyll` files to prevent Jekyll processing
+- [x] Configured GitHub Pages deployment workflow
+- [x] Repository ready at: https://github.com/Vaporjawn/Spell-Checker
 
-## 🔧 Next Steps (Manual - Please Follow)
+## 🤖 Automated Deployment (Recommended)
 
-### Enable GitHub Pages:
+### Option A: GitHub Actions (Automatic) ⭐ RECOMMENDED
+
+Your repository now has automated deployment configured! Every time you push to the `main` or `master` branch, GitHub Actions will automatically deploy your site.
+
+**Setup Steps:**
+
+1. **Enable GitHub Pages in Repository Settings**
+   - Navigate to: https://github.com/Vaporjawn/Spell-Checker/settings/pages
+   - Under "Build and deployment"
+   - **Source**: Select **"GitHub Actions"** (not "Deploy from a branch")
+   - Click **"Save"**
+
+2. **Push Your Changes**
+   ```bash
+   git add .
+   git commit -m "Enable GitHub Pages with automated deployment"
+   git push origin main
+   ```
+
+3. **Monitor Deployment**
+   - Visit: https://github.com/Vaporjawn/Spell-Checker/actions
+   - Watch the "Deploy to GitHub Pages" workflow run
+   - Deployment typically takes 1-2 minutes
+
+4. **Access Your Live Site** 🎉
+   - URL: https://vaporjawn.github.io/Spell-Checker/
+   - Bookmark this URL!
+
+**Benefits of Automated Deployment:**
+- ✅ Automatic deployment on every push
+- ✅ No manual configuration needed after initial setup
+- ✅ Deployment status visible in Actions tab
+- ✅ Rollback capability through Git history
+- ✅ Consistent deployment process
+
+---
+
+## 🔧 Manual Deployment (Alternative)
+
+### Option B: Deploy from Branch (Manual)
+
+If you prefer manual deployment without GitHub Actions:
 
 1. **Navigate to Repository Settings**
    - Go to: https://github.com/Vaporjawn/Spell-Checker/settings/pages
 
 2. **Configure GitHub Pages**
    - Under "Build and deployment"
-   - **Source**: Select "Deploy from a branch"
-   - **Branch**: Select "master"
-   - **Folder**: Select "/docs"
+   - **Source**: Select **"Deploy from a branch"**
+   - **Branch**: Select **"master"** or **"main"**
+   - **Folder**: Select **"/docs"**
    - Click **"Save"**
 
 3. **Wait for Deployment** (2-5 minutes)
@@ -26,6 +69,58 @@
 4. **Visit Your Live Site**
    - URL: https://vaporjawn.github.io/Spell-Checker/
    - Bookmark this URL!
+
+---
+
+## 📁 Project Structure
+
+Your GitHub Pages setup uses this structure:
+
+```
+Spell-Checker/
+├── docs/                          # GitHub Pages source (published)
+│   ├── index.html                # Main page
+│   ├── style.css                 # Styling
+│   ├── app.js                    # Spell checker logic
+│   ├── .nojekyll                 # Prevents Jekyll processing
+│   └── README.md                 # Documentation
+├── .github/
+│   └── workflows/
+│       └── deploy-pages.yml      # Automated deployment workflow
+├── .nojekyll                      # Root-level Jekyll bypass
+└── GITHUB_PAGES_SETUP.md         # This guide
+```
+
+---
+
+## 🔄 Updating Your Live Site
+
+### With Automated Deployment (GitHub Actions):
+```bash
+# Make changes to files in docs/
+cd docs/
+# Edit index.html, style.css, app.js, etc.
+
+# Commit and push
+git add .
+git commit -m "Update spell checker features"
+git push origin main
+
+# GitHub Actions automatically deploys in 1-2 minutes!
+```
+
+### With Manual Deployment:
+```bash
+# Make changes to files in docs/
+# Commit and push to trigger rebuild
+git add .
+git commit -m "Update spell checker"
+git push origin main
+
+# Wait 2-5 minutes for GitHub to rebuild and deploy
+```
+
+---
 
 ## 🎨 Optional: Custom Domain
 
