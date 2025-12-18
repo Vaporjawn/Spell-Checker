@@ -4,7 +4,7 @@ This module provides both a web interface and REST API for spell checking functi
 Includes security headers, CORS configuration, and rate limiting.
 """
 
-from datetime import datetime, UTC
+from datetime import datetime, timezone
 import platform
 import secrets
 import sys
@@ -213,7 +213,7 @@ def health_check() -> Tuple[Dict[str, Any], int]:
                 "status": "healthy",
                 "service": "spell-checker-api",
                 "version": APP_VERSION,
-                "timestamp": datetime.now(UTC).isoformat(),
+                "timestamp": datetime.now(timezone.utc).isoformat(),
                 "system": {
                     "python_version": sys.version,
                     "platform": platform.platform(),
@@ -277,7 +277,7 @@ def get_status() -> Tuple[Dict[str, Any], int]:
                     "cors": "enabled",
                     "security_headers": "enabled",
                 },
-                "timestamp": datetime.now(UTC).isoformat(),
+                "timestamp": datetime.now(timezone.utc).isoformat(),
             }
         ),
         200,
