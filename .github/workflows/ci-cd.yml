@@ -1,4 +1,4 @@
-﻿name: CI/CD Pipeline
+name: CI/CD Pipeline
 
 on:
   push:
@@ -129,7 +129,7 @@ jobs:
           pytest tests/ -v --cov=lib --cov=main --cov-report=xml --cov-report=html --cov-report=term-missing -n auto
 
       - name: Upload coverage reports
-        uses: codecov/codecov-action@v4
+        uses: codecov/codecov-action@v5
         if: matrix.python-version == '3.11'
         with:
           file: ./coverage.xml
